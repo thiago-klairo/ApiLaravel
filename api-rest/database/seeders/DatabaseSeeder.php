@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        //o has depois do factory, é composto dessa forma por pega o has do hasMany contido na model, juntando com a model que fará a realação, ficando assim hasProduct
+        \App\Models\Store::factory(10)->hasProducts(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
