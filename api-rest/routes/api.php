@@ -5,7 +5,10 @@ use App\Http\Controllers\dogController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+Route::get('dogs', 'App\Http\Controllers\dogController@index');
 
+Route::post('dogs', 'App\Http\Controllers\dogController@store');
 
+Route::put('dogs/{id}', 'App\Http\Controllers\dogController@update');
 
-Route::apiResource('dogs', 'App\Http\Controllers\dogController');
+Route::delete('dogs/{id}', 'App\Http\Controllers\dogController@destroy');
