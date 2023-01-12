@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('dogs', 'App\Http\Controllers\dogController@index');
 
+Route::get('dogs/{id}', 'App\Http\Controllers\dogController@show');
+
 Route::post('dogs', 'App\Http\Controllers\dogController@store');
 
 Route::put('dogs/{id}', 'App\Http\Controllers\dogController@update');
