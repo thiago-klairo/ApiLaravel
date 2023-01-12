@@ -28,8 +28,8 @@ class dogController extends Controller
 
     public function show($id)
     {
-        $dog = ModelsDog::find($id);
-        return $dog;
+
+        return ModelsDog::find($id);
     }
 
     public function update(Request $request, $id)
