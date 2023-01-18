@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use App\Models\ModelsDog;
 
 class dogController extends Controller
@@ -31,6 +32,14 @@ class dogController extends Controller
 
         return ModelsDog::find($id);
     }
+
+    public function api()
+    {
+
+        $response = Http::get('https://api.github.com/users');
+        return json_decode($response);
+    }
+
 
     public function update(Request $request, $id)
     {
